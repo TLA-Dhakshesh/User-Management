@@ -13,6 +13,7 @@ DB_NAME = 'user_management_db'
 DB_USER = 'postgres'
 DB_PASSWORD = 'Dhaksheshhpe7'
 
+# The JSON FILE is uploaded to the Postgres SQL
 
 @app.route('/api/users', methods=['POST'])
 def upload_json():
@@ -38,7 +39,8 @@ def upload_json():
         return jsonify({"Message":"Data uploaded successfully"}),200
     except Exception as e:
         return jsonify({"error":str(e)}),500
-    
+
+#Returns all the data from the Database
 @app.route('/api/users',methods=['GET'])
 def page_limit_search_sort():
     try:
@@ -97,6 +99,7 @@ def page_limit_search_sort():
     except Exception as e:
         return jsonify("error:",str(e)),500
 
+#It gives the details of the specified ID
 @app.route('/api/users/<int:id>',methods=['GET'])
 def get_user_details(id):
     try:
@@ -130,6 +133,7 @@ def get_user_details(id):
     except Exception as e:
         return jsonify({"error":str(e)}),500
 
+#Updating the entire row with the specified ID
 @app.route('/api/users/<int:id>', methods=['PUT'])
 def get_user_from_id(id):
     user_data = request.get_json()
@@ -166,6 +170,7 @@ def get_user_from_id(id):
     except Exception as e:
         return jsonify({"error":str(e)}),500
 
+#Deleting the User with their ID
 @app.route('/api/users/<int:id>',methods=['DELETE'])
 def delete_user_details(id):
     try:
@@ -184,6 +189,7 @@ def delete_user_details(id):
     except Exception as e:
         return jsonify({"error":str(e)}),500
 
+#Partially updating the data
 @app.route('/api/users/<int:id>',methods=['PATCH'])
 def update_user_partial(id):
     user_data=request.get_json()
@@ -207,6 +213,7 @@ def update_user_partial(id):
     except Exception as e:
         return jsonify({"error":str(e)}),500
 
+#It give the summary of Database
 @app.route('/api/users/summary',methods=['GET'])
 def user_summary():
     try:
