@@ -41,7 +41,9 @@ The API should now be running at http://127.0.0.1:5000/
 
     Endpoint: PUT /api/users/<int:id>
     Example: 
-    curl -X PUT "http://127.0.0.1:5000/api/users/1" \-H "Content-Type: application/json" \-d '{"first_name": "Dhakshesh", "last_name": "T L A", "company_name": "HPE", "city": 
+    curl -X PUT "http://127.0.0.1:5000/api/users/1" \
+    -H "Content-Type: application/json" \
+    -d '{"first_name": "Dhakshesh", "last_name": "T L A", "company_name": "HPE", "city": 
             "Bangalore", "state":"KA", "zip":858, "email":"dhakshesh.t-l-a@hpe.com", "web":"www.hpe.com", "age":21}'
 
 ## Delete User
@@ -61,4 +63,20 @@ The API should now be running at http://127.0.0.1:5000/
     Endpoint: GET /api/users/summary
     Example: 
     http://127.0.0.1:5000/api/users/summary
+
+
+# How long did it take 
+It took me 3 days to complete this assessment. I know python programming but learning flask was a something new and intresting. With my knowledge of Flask and reference with documentation I did my best.
+# What was more challenging
+The challenging here was uploading the JSON file to the Pgadmin.
+# What was unclear
+I feel like everything was clear, and I should improve myself more on FLASK.
+# Is the difficulty appropriate 
+Yes, the project was challenging. I learned FLASK concepts, database handling and API structuring.
+# Why chosen tools
+FLASK - Lightweight and easy to set for the REST API development.
+SQLALCHEMY - Simplifies database interactions.
+# Any assumptions or decisions made
+Decided to implement pagination for better performance.
+
 
