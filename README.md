@@ -6,16 +6,16 @@ This is a Flask based API that provides inserting the JSON data to PostgresSQL a
 git clone https://github.com/TLA-Dhakshesh/User-Management.git
 
 # Create a Virtual Environment
-python -m venv myenv
-source myenv/bin/activate
+    python -m venv myenv
+    source myenv/bin/activate
 
 # Installations
-pip install flask
-pip install sqlalchemy psycopg2-binary
+    pip install flask
+    pip install sqlalchemy psycopg2-binary
 
 # Run these commands
-export FLASK_APP=app.py
-flask run
+    export FLASK_APP=app.py
+    flask run
 
 The API should now be running at http://127.0.0.1:5000/
 ## API Endpoint
